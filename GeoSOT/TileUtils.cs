@@ -122,13 +122,13 @@ namespace GeoSOT
         public uint GetL(double lng, int level)
         {
             var L = EncodeLngLat(lng);
-            return L >> (31-level);
+            return L >> (32-level);
         }
 
         public uint GetB(double lat, int level)
         {
             var B = EncodeLngLat(lat);
-            return B >> (31 - level);
+            return B >> (32 - level);
         }
 
         public string GetLngLatCode(double lat, double lng, int level)
